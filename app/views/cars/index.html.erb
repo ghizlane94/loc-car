@@ -1,0 +1,26 @@
+
+<div class="first-div">
+  <form action="<%=cars_path%>" method="get">
+  <div class="row height d-flex justify-content-center align-items-center">
+    <div class="col-md-8">
+      <div class="search">
+        <i class="fa fa-search"></i>
+        <input type="text" name="q" class="form-control" placeholder="Search">
+        <button class="btn btn-primary">Search</button>
+      </div>
+    </div>
+  </div>
+  </form>
+</div>
+<div class="card-container">
+  <%@cars.each do |car|  %>
+    <div class="card" style="width: 18rem;">
+        <img src="<%=car.url_image%>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= car.brand %></h5>
+          <p class="card-text"><%= car.description %></p>
+          <a href="<%=car_path(car)%>" class="btn btn-primary">See more</a>
+        </div>
+    </div>
+  <%end  %>
+</div>

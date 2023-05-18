@@ -1,0 +1,48 @@
+<div class="box">
+  <div class="first-box">
+    <img src="<%=@car.url_image%>" alt="">
+    <h5><%= @user.first_name %> <%= @user.last_name %></h5>
+    <p>Brand: <%= @car.brand %></p>
+  </div>
+  <div class="second-box">
+    <div  class="small-box">
+      <p>Price: </p>
+      <p><%= @car.price %> dh/day</p>
+    </div>
+    <hr>
+    <div class="small-box" >
+      <p>Color:</p>
+      <p><%= @car.color %></p>
+    </div>
+    <hr>
+    <div class="small-box">
+      <p>Mileage: </p>
+      <p><%= @car.mileage %></p>
+    </div>
+    <hr>
+    <div class="small-box">
+      <p>Description: </p>
+      <p><%= @car.description %></p>
+    </div>
+  </div>
+</div>
+
+<%# <button class="booking">Book now</button> %>
+<%= link_to "Create Car",new_car_path, class:"booking" %>
+
+<div class="big-div" >
+    <form action="<%=car_reservations_path(@car, @reservation)%>" method="post" class="div-reservation">
+      <div class="start-input">
+        <label for="start-time">Starting date & time: </label>
+        <input type="datetime-local" id="start-time" name="reservation[start_time]" value="<%= @reservation.start_time%>"
+      min= "<%= (Time.now + 1.hour).strftime('%Y-%m-%dT%H:%M') %>" max = "<%= (Time.now + 1.month).strftime('%Y-%m-%dT%H:%M') %>">
+      </div>
+      <div class="end-input">
+        <label for="fin-time">Finishing date & time:</label>
+        <input type="datetime-local" id="fin-time" name="reservation[end_time]" value="<%= @reservation.end_time %>" min="<%= (Time.now + 2.hour).strftime('%Y-%m-%dT%H:%M') %>" max = "<%= (Time.now + 1.month).strftime('%Y-%m-%dT%H:%M') %>" >
+      </div>
+      <div class="submit">
+        <input type="submit" value="Book Now" class="home-submit">
+      </div>
+    </form>
+</div>
