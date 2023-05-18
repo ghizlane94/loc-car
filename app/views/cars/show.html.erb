@@ -1,0 +1,32 @@
+<div class="box">
+  <div class="first-box">
+    <img src="<%=@car.url_image%>" alt="">
+    <h5><%= @user.first_name %> <%= @user.last_name %></h5>
+    <p>Brand: <%= @car.brand %></p>
+  </div>
+  <div class="second-box">
+    <div  class="small-box">
+      <p>Price: </p>
+      <p><%= @car.price %> dh/day</p>
+    </div>
+    <hr>
+    <div class="small-box" >
+      <p>Color:</p>
+      <p><%= @car.color %></p>
+    </div>
+    <hr>
+    <div class="small-box">
+      <p>Mileage: </p>
+      <p><%= @car.mileage %></p>
+    </div>
+    <hr>
+    <div class="small-box">
+      <p>Description: </p>
+      <p><%= @car.description %></p>
+    </div>
+  </div>
+</div>
+
+<button class="booking">Book now</button>
+<%= link_to "Create Car",new_car_path %>
+<%= link_to "Book now", new_car_reservation_path(@car) %>

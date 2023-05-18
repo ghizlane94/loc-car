@@ -1,0 +1,16 @@
+<div class="big-div" >
+    <form action="<%=reservations_path%>" method="get" class="div-reservation">
+      <div class="start-input">
+        <label for="start-time">Date et heure:</label>
+        <input type="datetime-local" id="start-time" name="reservation[start_time]" value="<%= @reservation.start_time%>"
+      min= "<%= (Time.now + 1.hour).strftime('%Y-%m-%dT%H:%M') %>" max = "<%= (Time.now + 1.month).strftime('%Y-%m-%dT%H:%M') %>">
+      </div>
+      <div class="end-input">
+        <label for="fin-time">Date et heure:</label>
+        <input type="datetime-local" id="fin-time" name="reservation[end_time]" value="<%= @reservation.end_time %>" min="<%= (Time.now + 2.hour).strftime('%Y-%m-%dT%H:%M') %>" max = "<%= (Time.now + 1.month).strftime('%Y-%m-%dT%H:%M') %>" >
+      </div>
+      <div class="submit">
+        <input type="submit" value="Book" class="home-submit">
+      </div>
+    </form>
+</div>
