@@ -1,1 +1,24 @@
-<h1>hi from show</h1>
+<div class="contain">
+  <div class="first">
+    <div class="profil">
+      <img src="https://media.istockphoto.com/id/1337144146/fr/vectoriel/vecteur-dic%C3%B4ne-de-profil-davatar-par-d%C3%A9faut.jpg?s=170667a&w=0&k=20&c=o_wMhufXfqOtU-3qRd98jAgUFTAOmeJ_4jxH8yONUB0=" alt="">
+      <h5><%= current_user.first_name %> <%= current_user.last_name %></h5>
+    </div>
+    <hr>
+    <div class="info-car">
+      <img src="<%=@car.url_image%>" alt="">
+      <h5>Brand: <%= @car.brand %></h5>
+      <h5>Description: <%= @car.description %></h5>
+      <h5>Price: <%= (@car.price)* @duration %> Dirhams</h5>
+    </div>
+  </div>
+  <div class="reservation">
+      <h2>Your Reservation</h2>
+      <hr>
+      <h5>Start: <%= @reservation.start_time %></h5>
+      <h5>Finish: <%= @reservation.end_time %></h5>
+  </div>
+</div>
+<div class="confirm">
+  <button>Confirm Your Reservation</button>
+</div>

@@ -1,5 +1,10 @@
-<%@reservations.each do|reservation| %>
-<h1><%= reservation.start_time %></h1>
-<h1><%= reservation.end_time %></h1>
-<h1><%= reservation.car.brand %></h1>
-<%end  %>
+<div class="container">
+  <%@reservations.each do|reservation| %>
+  <br>
+  <h2>Reservation <%= @sum += 1%></h1>
+  <hr class="line">
+  <h5><%= reservation.start_time %></h5>
+  <h5><%= reservation.end_time %></h5>
+  <h5><%= reservation.car.brand %></h5>
+  <%end  %>
+</div>

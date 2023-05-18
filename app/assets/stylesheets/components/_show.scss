@@ -40,8 +40,112 @@
  padding: 6px 15px;
  position: absolute;
  top: 480px;
- right: 1070px;
+ right: 1050px;
+ text-decoration: none;
  &:hover{
   background-color: rgb(9, 26, 218);
+  color:white;
  }
+}
+// reservation
+.big-div{
+  display:flex;
+  justify-content: center;
+
+  .div-reservation{
+    border: 1px solid rgb(178, 176, 176);
+    background-color: white;
+    border-radius: 15px;
+    width: 400px;
+    height: 300px;
+    margin: 50px;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    .start-input{
+      display: flex;
+      flex-direction: column;
+      padding: 7px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+    }
+    .end-input{
+      display: flex;
+      flex-direction: column;
+      padding: 7px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .submit{
+      padding: 7px 13px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+      .home-submit{
+        background-color: white;
+        border:rgb(44, 59, 222) 1px solid;
+        color:rgb(44, 59, 222);
+        border-radius: 4px;
+        padding: 6px;
+        &:hover{
+        background-color: rgb(44, 59, 222);
+        border:none;
+        color:white;
+
+        }
+      }
+    }
+  }
+
+}
+// show reservation
+.contain{
+  display: flex;
+  justify-content: space-between;
+  margin: 50px;
+  border: 1px solid gray;
+  border-radius: 15px;
+  padding: 10px 30px;
+  .first{
+    width: 30%;
+  }
+  .reservation{
+    width: 40%;
+    padding-top: 40px;
+  }
+}
+.profil{
+  display:flex;
+  img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  h5{
+    margin-top: 40px;
+    margin-left: 7px;
+  }
+}
+.info-car{
+  img{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    padding-bottom: 5px;
+  }
+  h5{
+    padding-top: 15px;
+  }
+}
+.confirm{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  button{
+  padding: 10px 30px;
+  border:none;
+  background-color: rgb(44, 59, 222);
+  color:white;
+  border-radius: 10px;
+  }
 }
