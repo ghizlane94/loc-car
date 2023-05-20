@@ -1,3 +1,4 @@
+// styling show car
 .box{
   display:flex;
   justify-content: space-between;
@@ -32,22 +33,37 @@
     }
   }
 }
-.booking{
+.update-btn{
  background-color: rgb(44, 59, 222);
  color:white;
  border:none;
  border-radius: 6px;
- padding: 6px 15px;
+ padding: 6px 20px;
  position: absolute;
  top: 480px;
- right: 1050px;
+ right: 1095px;
  text-decoration: none;
  &:hover{
   background-color: rgb(9, 26, 218);
   color:white;
  }
 }
-// reservation
+.delete-btn{
+  background-color: rgb(44, 59, 222);
+  color:white;
+  border:none;
+  border-radius: 6px;
+  padding: 6px 20px;
+  position: absolute;
+  top: 480px;
+  right: 90px;
+  text-decoration: none;
+  &:hover{
+    background-color: rgb(9, 26, 218);
+
+  }
+}
+// reservation in show car
 .big-div{
   display:flex;
   justify-content: center;
@@ -98,7 +114,7 @@
   }
 
 }
-// show reservation
+// styling show reservation
 .contain{
   display: flex;
   justify-content: space-between;
@@ -106,6 +122,7 @@
   border: 1px solid gray;
   border-radius: 15px;
   padding: 10px 30px;
+  position: relative;
   .first{
     width: 30%;
   }
@@ -114,16 +131,19 @@
     padding-top: 40px;
   }
 }
-.profil{
-  display:flex;
-  img{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-  }
-  h5{
-    margin-top: 40px;
-    margin-left: 7px;
+.delete-resa{
+  background-color: rgb(44, 59, 222);
+  color:white;
+  border:none;
+  border-radius: 6px;
+  padding: 6px 20px;
+  position: absolute;
+  top: 370px;
+  right: 90px;
+  text-decoration: none;
+  &:hover{
+    background-color: rgb(9, 26, 218);
+
   }
 }
 .info-car{
@@ -148,4 +168,43 @@
   color:white;
   border-radius: 10px;
   }
+}
+// styling popup
+.popup{
+  width:400px;
+  background-color: white;
+  border-radius: 6px;
+  position: absolute;
+  top:50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  visibility: hidden;
+}
+.popup img{
+  width: 100px;
+  margin-top:-50px;
+  border-radius:50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.popup h2{
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+}
+.popup .style-btn{
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px 120px;
+  background-color: #4e9a06;
+  color: #fff;
+  border:0;
+  outline:none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
 }

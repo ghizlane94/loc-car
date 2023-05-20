@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :cars do
     resources :reservations, only: %i[create new]
   end
-  resources :reservations, only: %i[index show]
+  resources :reservations, only: %i[index show destroy]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

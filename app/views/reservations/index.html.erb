@@ -3,8 +3,9 @@
   <br>
   <h2>Reservation <%= @sum += 1%></h1>
   <hr class="line">
-  <h5><%= reservation.start_time %></h5>
-  <h5><%= reservation.end_time %></h5>
-  <h5><%= reservation.car.brand %></h5>
+  <h5>Brand: <%= reservation.car.brand %></h5>
+  <h5>Price: <%= (reservation.car.price) * ((reservation.end_time.to_date - reservation.start_time.to_date).to_i)%> Dirhams</h5>
+  <h5>From: <%= reservation.start_time %></h5>
+  <h5>To: <%= reservation.end_time %></h5>
   <%end  %>
 </div>

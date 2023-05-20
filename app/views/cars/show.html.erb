@@ -2,7 +2,7 @@
   <div class="first-box">
     <img src="<%=@car.url_image%>" alt="">
     <h5><%= @user.first_name %> <%= @user.last_name %></h5>
-    <p>Brand: <%= @car.brand %></p>
+    <h5>Brand: <%= @car.brand %></h5>
   </div>
   <div class="second-box">
     <div  class="small-box">
@@ -28,7 +28,8 @@
 </div>
 
 <%# <button class="booking">Book now</button> %>
-<%= link_to "Create Car",new_car_path, class:"booking" %>
+<%= button_to "Delete", car_path(@car), method: :delete, form: { data: { turbo: true, turbo_confirm: "Are you sure?" } }, class:"delete-btn" %>
+<%= link_to "Edit",edit_car_path(@car), class:"update-btn"%>
 
 <div class="big-div" >
     <form action="<%=car_reservations_path(@car, @reservation)%>" method="post" class="div-reservation">

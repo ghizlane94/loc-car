@@ -27,6 +27,23 @@ class CarsController < ApplicationController
     end
 
   end
+  def edit
+    @car =Car.find(params[:id])
+  end
+
+  def update
+    @car = Car.find(params[:id])
+    if @car.update(car_params)
+      redirect_to @car
+    else
+      render :edit
+    end
+  end
+  def destroy
+    @car = Car.find(params[:id])
+    @car.destroy
+    redirect_to cars_path, notice: "Car has been destroyed!"
+  end
   private
   def car_params
     params.require(:car).permit(:brand, :description, :price, :color, :mileage, :url_image)
