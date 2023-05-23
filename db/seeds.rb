@@ -51,7 +51,7 @@ puts "Creating cars"
 car1 = Car.create!(
   brand: "BMW",
   color: "red",
-  user: user1,
+  user_id: user1.id,
   mileage: 10000,
   price: 300,
   description: "this is a BMW car",
@@ -60,7 +60,7 @@ car1 = Car.create!(
 car2 = Car.create!(
   brand: "Audi",
   color: "blue",
-  user: user2,
+  user_id: user2.id,
   mileage: 20000,
   price: 400,
   description: "this is a Audi car",
@@ -69,7 +69,7 @@ car2 = Car.create!(
 car3 = Car.create!(
   brand: "Mercedes",
   color: "green",
-  user: user3,
+  user_id: user3.id,
   mileage: 30000,
   price: 500,
   description: "this is a Mercedes car",
@@ -78,7 +78,7 @@ car3 = Car.create!(
 car4 = Car.create!(
   brand: "Honda",
   color: "yellow",
-  user: user4,
+  user_id: user4.id,
   mileage: 40000,
   price: 600,
   description: "this is a Honda car",
@@ -87,7 +87,7 @@ car4 = Car.create!(
 car5 = Car.create!(
   brand: "Toyota",
   color: "black",
-  user: user5,
+  user_id: user5.id,
   mileage: 50000,
   price: 700,
   description: "this is a Toyota car",

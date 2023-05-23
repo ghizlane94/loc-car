@@ -9,9 +9,9 @@ class CarsController < ApplicationController
   end
 
   def show
-    @user = current_user
     @car = Car.find(params[:id])
     @reservation =Reservation.new
+    @user = @car.user
   end
 
   def new
