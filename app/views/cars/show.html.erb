@@ -32,18 +32,22 @@
 <%= link_to "Edit",edit_car_path(@car), class:"update-btn"%>
 
 <div class="big-div" >
-    <form action="<%=car_reservations_path(@car, @reservation)%>" method="post" class="div-reservation">
-      <div class="start-input">
-        <label for="start-time">Starting date & time: </label>
-        <input type="datetime-local" id="start-time" name="reservation[start_time]" value="<%= @reservation.start_time%>"
-      min= "<%= (Time.now + 1.hour).strftime('%Y-%m-%dT%H:%M') %>" max = "<%= (Time.now + 1.month).strftime('%Y-%m-%dT%H:%M') %>">
-      </div>
-      <div class="end-input">
-        <label for="fin-time">Finishing date & time:</label>
-        <input type="datetime-local" id="fin-time" name="reservation[end_time]" value="<%= @reservation.end_time %>" min="<%= (Time.now + 2.hour).strftime('%Y-%m-%dT%H:%M') %>" max = "<%= (Time.now + 1.month).strftime('%Y-%m-%dT%H:%M') %>" >
-      </div>
-      <div class="submit">
-        <input type="submit" value="Book Now" class="home-submit">
-      </div>
-    </form>
+  <div class="div-reservation">
+  <%= simple_form_for([@car, @reservation]) do |f| %>
+  <div class="row">
+
+      <%= f.input :start_time, as: :string,
+                  wrapper_html: { class: "mb-4" },
+                  label_html: { class: "form-label text-secondary fw-bold" },
+                  input_html: { data: { controller: "flatpickr" } } %>
+
+
+      <%= f.input :end_time, as: :string,
+                  wrapper_html: { class: "mb-4" },
+                  label_html: { class: "form-label text-secondary fw-bold" },
+                  input_html: { data: { controller: "flatpickr" } } %>
+      <%= f.submit "Book now", class:"home-submit" %>
+  </div>
+  <% end %>
+  </div>
 </div>

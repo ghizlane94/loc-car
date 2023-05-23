@@ -9,7 +9,9 @@ class ReservationsController < ApplicationController
     @end_time = @reservation.end_time
     @car = @reservation.car
     @reservation.user = current_user
-    @duration = (@end_time.to_date - @start_time.to_date).to_i
+    if @start_time && @end_time
+     @duration = (@end_time.to_date - @start_time.to_date).to_i
+    end
   end
 
   def new
