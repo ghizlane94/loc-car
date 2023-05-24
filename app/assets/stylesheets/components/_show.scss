@@ -8,7 +8,7 @@
   border-radius: 10px;
   padding: 30px;
   margin: 70px;
-  height: 400px;
+  height: 500px;
   position: relative;
   .first-box{
     width: 30%;
@@ -40,7 +40,7 @@
  border-radius: 6px;
  padding: 6px 20px;
  position: absolute;
- top: 480px;
+ top: 550px;
  right: 1095px;
  text-decoration: none;
  &:hover{
@@ -55,7 +55,7 @@
   border-radius: 6px;
   padding: 6px 20px;
   position: absolute;
-  top: 480px;
+  top: 550px;
   right: 90px;
   text-decoration: none;
   &:hover{
@@ -73,15 +73,16 @@
     border-radius: 15px;
     width: 600px;
     height: 300px;
-    margin: 50px;
     padding: 30px;
-
+    margin-bottom: 30px;
     .home-submit{
       background-color: white;
       border:rgb(44, 59, 222) 1px solid;
       color:rgb(44, 59, 222);
       border-radius: 4px;
-      padding: 6px 10px;
+      width: 530px;
+      height: 35px;
+      margin-left:15px;
       &:hover{
       background-color: rgb(44, 59, 222);
       border:none;
@@ -89,7 +90,6 @@
       }
     }
   }
-
 }
 // styling show reservation
 .contain{

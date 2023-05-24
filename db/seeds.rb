@@ -54,7 +54,7 @@ car1 = Car.create!(
   user_id: user1.id,
   mileage: 10000,
   price: 300,
-  description: "this is a BMW car",
+  description: "BMW, in full Bayerische Motoren Werke AG, German automaker noted for quality sports sedans and motorcycles and one of the most prominent brands in the world",
   url_image: "https://www.cnet.com/a/img/resize/ddb20b964545336d2324614f2fc1453ba85565ac/hub/2022/01/20/49b42973-a81d-4b01-8d59-c209eb739df6/dsc01540.jpg?auto=webp&width=1200"
 )
 car2 = Car.create!(
@@ -63,7 +63,7 @@ car2 = Car.create!(
   user_id: user2.id,
   mileage: 20000,
   price: 400,
-  description: "this is a Audi car",
+  description: "The AUDI AG stands for sporty vehicles, high build quality and progressive design – for “Vorsprung durch Technik.” The Audi Group is among the world's leading producers of premium cars",
   url_image: "https://i.ytimg.com/vi/1EOagL1O2v4/maxresdefault.jpg"
 )
 car3 = Car.create!(
@@ -72,7 +72,7 @@ car3 = Car.create!(
   user_id: user3.id,
   mileage: 30000,
   price: 500,
-  description: "this is a Mercedes car",
+  description: "Mercedes have been pioneers of safety since the early days of the automobile. All recent Mercedes cars come equipped with a host of radars",
   url_image: "https://i.gaw.to/content/photos/25/38/253854_2017_Mercedes-Benz_AMG_GT.jpg"
 )
 car4 = Car.create!(
@@ -81,7 +81,7 @@ car4 = Car.create!(
   user_id: user4.id,
   mileage: 40000,
   price: 600,
-  description: "this is a Honda car",
+  description: "Honda is a Japanese publicmultinational conglomerate corporation primarily known as a manufacturer of automobiles, aircraft, motorcycles, and power equipment.",
   url_image: "https://cdn.motor1.com/images/mgl/B7eBA/s1/2021-honda-civic-type-r-limited-edition-exterior-front-quarter.jpg"
 )
 car5 = Car.create!(
@@ -90,6 +90,6 @@ car5 = Car.create!(
   user_id: user5.id,
   mileage: 50000,
   price: 700,
-  description: "this is a Toyota car",
+  description: "Toyota is an automobile manufacturer. The company designs, manufactures and sells passenger cars, buses, minivans, trucks, specialty cars, recreational and sport-utility vehicles.",
   url_image: "https://imgd.aeplcdn.com/0x0/n/sw356ra_1421818.jpg"
 )

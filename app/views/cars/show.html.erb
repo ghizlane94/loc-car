@@ -21,8 +21,7 @@
     </div>
     <hr>
     <div class="small-box">
-      <p>Description: </p>
-      <p><%= @car.description %></p>
+      <p>Description: <%= @car.description %></p>
     </div>
   </div>
 </div>
@@ -30,24 +29,23 @@
 <%# <button class="booking">Book now</button> %>
 <%= button_to "Delete", car_path(@car), method: :delete, form: { data: { turbo: true, turbo_confirm: "Are you sure?" } }, class:"delete-btn" %>
 <%= link_to "Edit",edit_car_path(@car), class:"update-btn"%>
-
 <div class="big-div" >
   <div class="div-reservation">
-  <%= simple_form_for([@car, @reservation]) do |f| %>
-  <div class="row">
+    <%= simple_form_for([@car, @reservation]) do |f| %>
+    <div class="row">
 
-      <%= f.input :start_time, as: :string,
-                  wrapper_html: { class: "mb-4" },
-                  label_html: { class: "form-label text-secondary fw-bold" },
-                  input_html: { data: { controller: "flatpickr" } } %>
+        <%= f.input :start_time, as: :string,
+                    wrapper_html: { class: "mb-4" },
+                    label_html: { class: "form-label text-secondary fw-bold" },
+                    input_html: { data: { controller: "flatpickr" } } %>
 
 
-      <%= f.input :end_time, as: :string,
-                  wrapper_html: { class: "mb-4" },
-                  label_html: { class: "form-label text-secondary fw-bold" },
-                  input_html: { data: { controller: "flatpickr" } } %>
-      <%= f.submit "Book now", class:"home-submit" %>
-  </div>
-  <% end %>
+        <%= f.input :end_time, as: :string,
+                    wrapper_html: { class: "mb-4" },
+                    label_html: { class: "form-label text-secondary fw-bold" },
+                    input_html: { data: { controller: "flatpickr" } } %>
+        <%= f.submit "Book now", class:"home-submit" %>
+    </div>
+    <% end %>
   </div>
 </div>
